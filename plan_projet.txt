@@ -1,0 +1,19 @@
+App already has:
+
+Upload PDF
+
+Extract text
+
+Next features:
+
+Load SEC documents (10-K, 10-Q) → Loader + manual upload for now
+
+Analyze: Summarize, ask questions
+
+Search: By ticker / company name
+
+Embed documents → vector search
+
+Database → Chroma or FAISS
+
+RAG pipeline → ask questions to documents

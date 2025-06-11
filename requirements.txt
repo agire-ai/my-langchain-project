@@ -1,0 +1,18 @@
+# Core
+streamlit
+python-dotenv
+langchain
+langchain_openai
+langchain_community
+chromadb
+
+# Loaders support
+pypdf          # for PyPDFLoader
+docx2txt       # for Docx2txtLoader
+unstructured
+beautifulsoup4
+lxml
+
+# Optional (but often useful)
+tiktoken       # for better token counting
+langsmith      # for LangSmith tracking
