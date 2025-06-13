@@ -169,12 +169,13 @@ if query := st.chat_input("Posez une question sur l'ensemble des documents..."):
 
             # Display source documents in an expander
             with st.expander("Documents sources utilisés"):
-                for doc in result['source_documents']:
+                for i, doc in enumerate(result['source_documents']):
                     metadata = doc.metadata
                     file_name = metadata.get("file_name", "Inconnu")
                     page = metadata.get("page", "N/A")
                     st.markdown(f"**Source:** `{file_name}` (Page: {page})")
-                    st.text_area("", doc.page_content, height=150, key=f"source_{hash(doc.page_content)}")
+                    # FIX: Add the loop index 'i' to the key to ensure uniqueness
+                    st.text_area("", doc.page_content, height=150, key=f"source_{i}_{hash(doc.page_content)}")
 
     # Add assistant response to history
     st.session_state.history.append({"role": "assistant", "content": answer})

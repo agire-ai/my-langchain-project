@@ -17,3 +17,6 @@ __pycache__/
 # DOCs I used
 *.pdf
 *.docx
+.ipynb_checkpoints/
+notebooks/
+docs.json
